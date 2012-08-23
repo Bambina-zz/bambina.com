@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/*::::::::::::::::::::::::::::Reset::::::::::::::::::::::::::::*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+/*::::::::::::::::::::::::::: Links :::::::::::::::::::::::::::*/
+a                       { color:#000; text-decoration: none;cursor: pointer;}
+a:visited               { color: #000; text-decoration: none;}
+a:hover                 { color: #c8c8c8; text-decoration: none; }
+/*:::::::::HTML5 display-role reset for older browsers:::::::::*/
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/*:::::::::::::::: これはナンダー！！あとで調べよう！ ::::::::::::::::*/
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*::::::::::::::::::::::::: *leyout* :::::::::::::::::::::::::*/
+
+html {
+	font-family: "HGS教科書体",serif;
+}
+#main {
+	background-color: #fff;
+}
+#hd1 {
+	height: 100px;
+	border-bottom: 2px solid #d11d1a;
+	margin-bottom: 70px;
+	min-width: 1200px;
+}
+#hd1 h1 {
+	float: left;
+	margin-left: -999px;
+}
+
+nav {
+    padding-top: 70px;
+    margin-left: 550px;
+}
+
+#hd1 li {
+	font-size: 90%;
+	margin-right: 40px;
+	margin-bottom: 10px;
+	display: inline;
+}
+
+#hd1 li a {
+	text-align: center;
+	width: 25%;
+	line-height: 2.5;
+}
+
+#hd1 img {
+	float: left;
+}
+#gift {
+	width: 900px;
+	margin: auto;
+}
+#gift h1 {
+	font-size: 20px;
+	margin: 20px 0 20px 0;
+}
+.tourdetails {
+	border: 2px solid #c8c8c8;
+	width: 845px;
+	height: 340px;
+	border-radius: 10px;
+	display: block;
+	padding: 30px;
+	margin-bottom: 60px;
+}
+.tourA {
+	width: 505px;
+	border-right: 1px solid #c8c8c8;
+	display: table;
+	float: left;
+}
+.tourA img {
+	float: left;
+	margin-right: 10px;
+}
+.tourA p {
+	font-size: 11px;
+	margin: 0 0 44px 0;	
+}
+.tourA em {
+	font-weight: bold;
+}
+.donationWrapper {
+	width: 440px;
+	padding-top: 40px;
+	clear: left;
+	margin-left: 500px;
+}
+.donateWrapper img {
+	float: none;
+	margin-left: 50px;
+	box-shadow: 3px 3px 3px #c8c8c8;
+}
+
+.donationWrapper em {
+	font-weight: bold;
+}
+.largered {
+	color: red;
+	font-size: 20px;
+}
+.donate {
+	margin-right: 0;
+}
+.Asinfo {
+	width: 300px;
+	padding-left: 30px;
+	display: box;
+	float: left;
+}
+.Asinfo p {
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+.Asinfo img {
+	margin-bottom: 15px;
+}
+.FBreaction {
+	float: left;
+	padding-top: 30px;
+}
+.FBreaction {
+	margin: auto;
+}
+.margin-right {
+	margin-right: 30px;
+}
+.tours {
+	margin: auto;
+	width: 940px;
+}
+.imageWrapper {
+	float: left;
+	position: relative;
+	width: 25%;
+}
+.onpic {
+	position: absolute;
+	top: 100px;
+	left: 0;
+}
+
+..imageWrapper p {
+	position: relative;
+}
+.imageWrapper img {
+	margin-left: 20px;
+}
+.p {
+	font-size: 18px;
+	color: #fff;
+	position: absolute;
+	left: 25px;
+	top: 8px;
+	font-weight: bold;
+}
+.info {
+	padding-top: 60px;
+	height: 10px;
+	clear: both;
+	border-bottom: 40px solid #d11d1a;
+}
+
+
+.info nav {
+    float: right;
+	padding-top: 20px;
+	height: 20px;
+
+}
+.info nav li {
+	display: inline;
+	margin: 20px;
+	font-size: 18px;
+}

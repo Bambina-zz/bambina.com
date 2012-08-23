@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+/*-----------------------------------------------
+                    RESET 
+------------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; }
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
+ol, ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:'';content:none; }
+a { margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent; }
+ins { background-color:#ff9;color:#000;text-decoration:none; }
+mark { background-color:#ff9;color:#000;font-style:italic;font-weight:bold; }
+del { text-decoration:line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted;cursor:help; }
+table { border-collapse:collapse;border-spacing:0; }
+hr { display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0; }
+input, select { vertical-align:middle; }
+
+/*-----------------------------------------------
+                     BASE
+------------------------------------------------*/
+body {
+	margin-top: 80px;
+	background: #fefefe;
+	text-align: center;
+	line-height: 1.4em;
+	/*font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;*/
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+header {
+	text-align: left;
+	margin: auto;
+	border-bottom: 1px solid #ccc;
+	padding: 30px 0;
+	width: 700px;
+	font-size: 50px;
+	margin-bottom: 10px;
+	color: #222;
+}
+a {
+	text-decoration: none;
+	color: #333;
+	line-height: 0.2em;  
+	transition-property: line-height;  
+	transition-duration: 1s;  
+	transition-timing-function: linear; 
+	-webkit-transition-property: line-height;  
+	-webkit-transition-duration: 1s;  
+	-webkit-transition-timing-function: linear; 
+}
+a:hover {
+	text-decoration: underline;
+	line-height: 1.4em;
+}
+button.fire{
+	color: #fff;
+	display: inline-block;
+	margin: 5px auto 10px auto;
+	border-radius: 4px;
+	padding: 0px 15px;
+	height: 30px;
+	line-height: 30px;
+	width: 160px;
+	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;;
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid #377a90;
+	background: #6fafc4; 
+	background: -moz-linear-gradient(top, #6fafc4 0%,#84bcce 1%,#6fafc4 3%, #498ea5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6fafc4), color-stop(1%,#84bcce), color-stop(3%,#6fafc4), color-stop(100%,#498ea5));
+	background: -webkit-linear-gradient(top, #6fafc4 0%, #84bcce 1%, #6fafc4 3%, #498ea5 100%); 
+	background: -o-linear-gradient(top, #6fafc4 0%,#84bcce 1%,#6fafc4 3%,#498ea5 100%);
+	background: -ms-linear-gradient(top, #6fafc4 0%,#84bcce 1%,#6fafc4 3%,#498ea5 100%);
+	background: linear-gradient(top, #6fafc4 0%,#84bcce 1%,#6fafc4 3%,#498ea5 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6fafc4', endColorstr='#498ea5',GradientType=0 ); 
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	z-index: 10;
+}
+.fire-check:hover + button.fire{
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.fire-check:checked + button.fire{
+	opacity: 0;
+	/*
+	color: #26687e;
+	border-color: #246b82;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+	background: #6fafc4;
+	background: -moz-linear-gradient(top, #4a92a9 0%, #377c93 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4a92a9), color-stop(100%,#377c93));
+	background: -webkit-linear-gradient(top, #4a92a9 0%,#377c93 100%); 
+	background: -o-linear-gradient(top, #4a92a9 0%,#377c93 100%);
+	background: -ms-linear-gradient(top, #4a92a9 0%,#377c93 100%);
+	background: linear-gradient(top, #4a92a9 0%,#377c93 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a92a9', endColorstr='#377c93',GradientType=0 ); 
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.4);
+	box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.5);
+	*/
+}
+.fire-check{
+	width: 160px;
+	position: absolute;
+	left: 50%;
+	margin-left: -80px;
+	height: 35px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 100;
+}
+.tn-box {
+	position: relative;
+	margin: 0 auto 3px auto;
+	text-align: center;
+	border-radius: 5px;
+	opacity: 0;
+	display: none;
+}
+
+input.fire-check:checked ~ section .tn-box {
+	display: block;
+	-webkit-animation: fadeOut 5s linear forwards;
+	-moz-animation: fadeOut 5s linear forwards;
+	-o-animation: fadeOut 5s linear forwards;
+	-ms-animation: fadeOut 5s linear forwards;
+	animation: fadeOut 5s linear forwards;
+}
+
+
+@-webkit-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1;}
+	99% { opacity: 1;}
+	100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; }
+	99% { opacity: 1; }
+	100% { opacity: 1; }
+}
+
+@-o-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; }
+	99% { opacity: 1; }
+	100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; }
+	99% { opacity: 1; }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; }
+	99% { opacity: 1; }
+	100% { opacity: 1; }
+}
+
+input.fire-check:checked ~ section .tn-box:nth-child(2) {
+	-webkit-animation-duration: 6s;
+	-moz-animation-duration: 6s;
+	-o-animation-duration: 6s;
+	-ms-animation-duration: 6s;
+	animation-duration: 6s;
+	
+	-webkit-animation-delay: 0.2s;
+	-moz-animation-delay: 0.2s;
+	-o-animation-delay: 0.2s;
+	-ms-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+
+
+input.fire-check:checked ~ section .tn-box:nth-child(3) {
+	-webkit-animation-duration: 9s;
+	-moz-animation-duration: 9s;
+	-o-animation-duration: 9s;
+	-ms-animation-duration: 9s;
+	animation-duration: 9s;
+	
+	-webkit-animation-delay: 0.4s;
+	-moz-animation-delay: 0.4s;
+	-o-animation-delay: 0.4s;
+	-ms-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+
+input.fire-check:checked ~ section .tn-box:nth-child(4) {
+	-webkit-animation-duration: 12s;
+	-moz-animation-duration: 12s;
+	-o-animation-duration: 12s;
+	-ms-animation-duration: 12s;
+	animation-duration: 12s;
+	
+	-webkit-animation-delay: 0.6s;
+	-moz-animation-delay: 0.6s;
+	-o-animation-delay: 0.6s;
+	-ms-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+}
+
+input.fire-check:checked ~ section .tn-box:nth-child(5) {
+	-webkit-animation-duration: 15s;
+	-moz-animation-duration: 15s;
+	-o-animation-duration: 15s;
+	-ms-animation-duration: 15s;
+	animation-duration: 15s;
+	
+	-webkit-animation-delay: 0.8s;
+	-moz-animation-delay: 0.8s;
+	-o-animation-delay: 0.8s;
+	-ms-animation-delay: 0.8s;
+	animation-delay: 0.8s;
+}
+
+input.fire-check:checked ~ section .tn-box:nth-child(6) {
+	-webkit-animation-duration: 18s;
+	-moz-animation-duration: 18s;
+	-o-animation-duration: 18s;
+	-ms-animation-duration: 18s;
+	animation-duration: 18s;
+	
+	-webkit-animation-delay: 1.0s;
+	-moz-animation-delay: 1.0s;
+	-o-animation-delay: 1.0s;
+	-ms-animation-delay: 1.0s;
+	animation-delay: 1.0s;
+}
+input.fire-check:checked ~ section .tn-box:nth-child(7) {
+	-webkit-animation-duration: 20s;
+	-moz-animation-duration: 20s;
+	-o-animation-duration: 20s;
+	-ms-animation-duration: 20s;
+	animation-duration: 20s;
+	
+	-webkit-animation-delay: 1.2s;
+	-moz-animation-delay: 1.2s;
+	-o-animation-delay: 1.2s;
+	-ms-animation-delay: 1.2s;
+	animation-delay: 1.2s;
+}
+
+.tn-box.tn-box-hoverpause:hover, 
+.tn-box.tn-box-hoverpause:hover {
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+	animation-play-state: paused;
+}
+
+

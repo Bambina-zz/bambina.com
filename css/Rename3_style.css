@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+/*-----------------------------------------------
+        PLEASE DO NOT CHECK THIS CSS
+           ESPECIALLY MY MENTOR><。
+           IF YOU WANNA CHECK THIS
+               YOU REALLY DO
+             
+       YOU CAN CHECK & GIVE ME ADVICE
+            
+                  BAMBI:P
+-----------------------------------------------*/
+
+
+/*-----------------------------------------------
+                    RESET 
+------------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; }
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
+ol, ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:'';content:none; }
+a { margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent; }
+ins { background-color:#ff9;color:#000;text-decoration:none; }
+mark { background-color:#ff9;color:#000;font-style:italic;font-weight:bold; }
+del { text-decoration:line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted;cursor:help; }
+table { border-collapse:collapse;border-spacing:0; }
+hr { display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0; }
+input, select { vertical-align:middle; }
+/*-----------------------------------------------
+                     BASE
+------------------------------------------------*/
+html, body {
+	min-height: 680px;
+	min-width: 970px;
+}
+body {
+	display: block;
+	position: relative;
+	width: 970px;
+	margin: 0 auto;
+	font-family: 'Italianno', cursive;
+	font-weight: 500;
+	font-size: 20px;
+	color: #fff;
+	letter-spacing: 0.2em;
+	background-image: url("../img/wall2.png");
+	background-repeat: repeat-y;
+	background-position: center;
+}
+a{
+	text-decoration: none;
+}
+/*-----------------------------------------------
+                     HEADER
+------------------------------------------------*/
+#header{
+	position: absolute;
+	z-index: 2000;
+	width: 970px;
+	top: 0;
+	background-image: url("../img/title.png");
+	background-repeat: no-repeat;
+}
+#header h1{
+	font-family: 'Italianno', cursive;
+	color: #c1e8e8;
+	margin: 0 0 0 -1000px;
+	font-size: 60px;
+}
+/*-----------------------------------------------
+                   NAVIGATION
+------------------------------------------------*/
+#navigation {
+    background-image: url("../img/menu_bar.png");
+	margin-top: 40px;
+	width: 970px;
+	height: 115px;
+	display:block;
+	list-style:none;
+	z-index:3;
+}
+#navigation a{
+	float: left;
+	display: block;
+	text-align: center;
+	width: 170px;
+	text-transform: uppercase;
+	margin-bottom: 6px;
+	border-right: 1px solid #c1e8e8;
+	color: #fefefe;
+	font-size: 14px;
+	line-height: 63px;
+}
+#navigation a:hover {
+	color: #51aef9;
+	text-shadow: #51aef9 0 0 15px;
+}
+/*--------------------------------------
+               CONTENTS
+---------------------------------------*/
+.content{
+	position: absolute;
+	margin: 0 0 0 60px;
+	padding-bottom: 30px;
+	width: 885px;
+}
+.content h2{
+    font-family: 'Italianno', cursive;
+	font-size: 40px;
+	text-align: center;
+	margin-top: 230px;
+	color: #3946a2;
+}
+/*--------------------------------------
+                  ME
+---------------------------------------*/
+.column {
+  float: left;
+  display: block;
+}
+.column.twone {
+  width: 320px;
+  margin: 0 0 0 75px ;
+  padding-top: 30px;
+}
+.column.twone.last {
+  margin: 0 75px 0 75px;
+}
+.profileimg img {
+  width: 140px;
+  margin: 20px 85px 0 85px;
+}
+.profile {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-top: 10px;
+  line-height: 3em;
+}
+.name {
+  color: #51aef9;
+  text-shadow: #51aef9 0 0 15px;
+  text-align: center;
+}
+.email {
+  color: #ff3e44;
+  text-shadow: #ff3e44 0 0px 15px;
+  text-align: center;
+}
+.email img {
+  vertical-align: middle;
+}
+.work {
+  color: #a8d02f;
+  text-shadow: #a8d02f 0 0px 15px;
+  text-align: center;
+}
+/*--------------------------------------
+                 PHOTO
+---------------------------------------*/
+#works {
+	padding: 30px 0px;
+	text-align: center;
+}
+#works li{
+	display: inline;
+}
+#works li a{
+	padding-right: 10px;
+}
+#works img {
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+	padding: 12px; 
+	background: rgba(255,255,255,0.9);
+}
+/*--------------------------------------
+                SPECIAL
+---------------------------------------*/
+.card {
+  width: 480px;
+  margin: 0;
+}
+.column.congrats {
+  margin-top: 80px;
+  padding: 10px;
+  font-family:  Arial, sans-serif;
+  font-size: 15px;
+  line-height: 2.0em;
+  background: #000;
+  color: #fff;
+}
+/*--------------------------------------
+                  SNS
+---------------------------------------*/
+.sns {
+  text-align: center;
+  margin: 30px;
+}
+.button,.button2,.button3 {
+	border: solid 1px #8AB134;
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 26px;
+	height: 30px;
+	width: 160px;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	color: #40740D;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+}
+.button img {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    border: none;
+    vertical-align: middle;
+}
+.button2 img {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    border: none;
+    vertical-align: middle;
+}
+.button3 img {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    border: none;
+    vertical-align: middle;
+}
+.button:hover {
+    color: #8AB134;
+}
+.button2:hover {
+    color: #8AB134;
+}
+.button3:hover {
+    color: #8AB134;
+}
+/*---------------------------------------
+                 PANEL
+----------------------------------------*/
+.panel{
+	min-width: 100%;
+	height: 99%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-top: -150%;
+	position: absolute;
+	background-image: url("../img/wall.png");
+	z-index: 2;
+	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+	-o-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+}
+.panel:target{
+	margin-top: 0%;
+	background-image: url("../img/wall.png");
+}
+
+
+
+
+
